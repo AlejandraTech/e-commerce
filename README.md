@@ -4,23 +4,23 @@ Este proyecto consiste en una aplicación de comercio electrónico desarrollada 
 
 ## Contenido del Repositorio 📂
 
-- **app/**: Este directorio contiene todos los componentes, servicios y otros archivos esenciales de la aplicación.
-  - **app/components/**: Aquí se encuentran los componentes principales de la aplicación, incluyendo:
-    - **cart/**: Componente para gestionar el carrito de compras.
-    - **home/**: Componente para la página de inicio.
-    - **login/**: Componente para el inicio de sesión de usuarios.
-    - **product-details/**: Componente para mostrar los detalles de los productos.
-    - **product-list/**: Componente para mostrar una lista de productos.
-    - **register/**: Componente para el registro de usuarios.
-    - **user-management/**: Componente para la gestión de usuarios y roles.
-  - **app/services/**: Contiene los servicios utilizados en la aplicación, incluyendo:
-    - **cart.service.ts**: Servicio para gestionar el carrito de compras.
-    - **product.service.ts**: Servicio para gestionar los productos.
-    - **user.service.ts**: Servicio para gestionar usuarios y autenticación.
-  - **app/app.component.html**: Plantilla principal de la aplicación que incluye el componente de barra de navegación (navbar).
-  - **app/app-routing.module.ts**: Configuración de las rutas de la aplicación.
-- **assets/**: Directorio para almacenar archivos estáticos como imágenes y estilos.
-- **index.html**: Archivo principal de la aplicación Angular donde se incluyen los scripts y estilos necesarios.
+- **`app/`**: Este directorio contiene todos los componentes, servicios y otros archivos esenciales de la aplicación.
+  - **`app/components/`**: Aquí se encuentran los componentes principales de la aplicación, incluyendo:
+    - **`cart/`**: Componente para gestionar el carrito de compras.
+    - **`home/`**: Componente para la página de inicio.
+    - **`login/`**: Componente para el inicio de sesión de usuarios.
+    - **`product-details/`**: Componente para mostrar los detalles de los productos.
+    - **`product-list/`**: Componente para mostrar una lista de productos.
+    - **`register/`**: Componente para el registro de usuarios.
+    - **`user-management/`**: Componente para la gestión de usuarios y roles.
+  - **`app/services/`**: Contiene los servicios utilizados en la aplicación, incluyendo:
+    - **`cart.service.ts`**: Servicio para gestionar el carrito de compras.
+    - **`product.service.ts`**: Servicio para gestionar los productos.
+    - **`user.service.ts`**: Servicio para gestionar usuarios y autenticación.
+  - **`app/app.component.html`**: Plantilla principal de la aplicación que incluye el componente de barra de navegación (navbar).
+  - **`app/app-routing.module.ts`**: Configuración de las rutas de la aplicación.
+- **`assets/`**: Directorio para almacenar archivos estáticos como imágenes y estilos.
+- **`index.html`**: Archivo principal de la aplicación Angular donde se incluyen los scripts y estilos necesarios.
 
 ## Funcionalidades 🛠️
 
