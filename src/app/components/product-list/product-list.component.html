@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let product of products" class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">Price: {{ product.price | currency }}</p>
+          <p class="card-text">Stock: {{ product.stock }}</p>
+          <button (click)="addToCart(product.id)" [disabled]="product.stock === 0" class="btn btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

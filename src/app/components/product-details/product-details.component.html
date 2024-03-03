@@ -1,0 +1,78 @@
+<div class="container mt-5">
+  <h2>Product Details</h2>
+
+  <!-- Search Bar -->
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Search products..." [(ngModel)]="searchTerm">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="search()">Search</button>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts">
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="editProduct(product)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteProduct(product)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add New Product Button -->
+  <button class="btn btn-success" (click)="addProduct()">Add New Product</button>
+
+  <!-- Formulario de añadir producto -->
+  <div *ngIf="showAddForm">
+    <h3>Add Product</h3>
+    <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="newProduct.name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" [(ngModel)]="newProduct.price" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" [(ngModel)]="newProduct.stock" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+  </div>
+
+  <!-- Formulario de edición del producto -->
+  <div *ngIf="selectedProduct">
+    <h3>Edit Product</h3>
+    <form (ngSubmit)="updateProduct(selectedProduct)">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="selectedProduct.name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" [(ngModel)]="selectedProduct.price" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" [(ngModel)]="selectedProduct.stock" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+      <button type="button" class="btn btn-secondary" (click)="selectedProduct = null">Cancel</button>
+    </form>
+  </div>
+</div>

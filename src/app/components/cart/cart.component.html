@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <div *ngIf="cartItems.length === 0; else cartItemsExist" class="text-center">
+    <p>Your cart is empty.</p>
+  </div>
+  <ng-template #cartItemsExist>
+    <div class="cart-items">
+      <div *ngFor="let item of cartItems" class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.product.name }}</h5>
+          <p class="card-text">Price: {{ item.product.price | currency }}</p>
+          <p class="card-text">Quantity: {{ item.quantity }}</p>
+          <button (click)="removeFromCart(item)" class="btn btn-danger">Remove</button>
+        </div>
+      </div>
+      <div class="text-center">
+        <button (click)="checkout()" class="btn btn-primary" [disabled]="cartItems.length === 0">Checkout</button>
+      </div>
+      <div class="total-price">
+        <h4>Total Price: {{ getTotalPrice() | currency }}</h4>
+      </div>
+    </div>
+  </ng-template>
+</div>
