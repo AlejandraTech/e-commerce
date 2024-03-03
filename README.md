@@ -39,13 +39,14 @@ Este proyecto consiste en una aplicación de comercio electrónico desarrollada 
 
 ## Cómo Usar 📋
 
-Para utilizar esta aplicación de comercio electrónico, sigue los siguientes pasos:
+Para utilizar el código fuente de esta aplicación de comercio electrónico en tu propio proyecto Angular, sigue los siguientes pasos:
 
-1. Clona el repositorio: `git clone https://github.com/AlejandraTech/e-commerce.git`
-2. Accede al directorio del proyecto: `cd e-commerce`
-3. Instala las dependencias necesarias ejecutando el siguiente comando en tu terminal: `npm install`
-4. Una vez instaladas las dependencias, puedes iniciar la aplicación ejecutando el siguiente comando: `ng serve`
-5. Abre tu navegador web y visita la siguiente URL: [http://localhost:4200/](http://localhost:4200/)
+1. Clona el repositorio: `git clone https://github.com/AlejandraTech/e-commerce.git`.
+2. Copia el directorio `src/` desde el repositorio clonado y pégalo en la raíz de tu proyecto Angular existente.
+3. Si faltan dependencias, asegúrate de instalarlas ejecutando `npm install` en el directorio de tu proyecto. Es posible que necesites instalar paquetes adicionales dependiendo de las configuraciones específicas de tu proyecto.
+4. Verifica que todas las rutas y referencias estén correctamente configuradas en tu proyecto.
+5. Una vez verificado todo, puedes iniciar la aplicación ejecutando el siguiente comando: `ng serve`
+6. Abre tu navegador web y visita la siguiente URL: [http://localhost:4200/](http://localhost:4200/)
 
 ## Contribuciones 🤝
 
